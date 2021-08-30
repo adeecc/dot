@@ -1,4 +1,4 @@
-# Dotfiles (BSPWM | Polybar | Rofiasdf)
+# Dotfiles (BSPWM | Polybar | Rofi)
 
 * Author: [adeecc](https://github.com/adeecc/)
 * Date: Aug 30, 2021
