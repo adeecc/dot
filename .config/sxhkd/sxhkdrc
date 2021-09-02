@@ -14,6 +14,22 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# Open VSCode
+super + alt + c
+	code
+
+# Open Firefox
+super + alt + f
+	firefox
+
+# Open Pavucontrol
+super + v
+	pavucontrol
+
+# Take Screenshot
+Print
+	flamehost full
+
 #
 # bspwm hotkeys
 #
@@ -120,13 +136,50 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# Move focused window to prev monitor
+super + shift + Left
+	bspc node -m prev --follow
+
+# Move focused window to next monitor
+super + shift + Right
+	bspc node -m next --follow
 
 #
 # Volume Controls
 #
 
-{XF86AudioRaiseVolume, XF86AudioLowerVolume}
-	/usr/bin/pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo {+10%, -10%};
+# Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 10%+
 
+# Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+# Mute
 XF86AudioMute
-	/usr/bin/pactl set-sink-mute alsa_output.pci-0000_00_1b.0.analog-stereo toggle
+    amixer -D pulse set Master 1+ toggle
+
+# PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+# Next
+XF86AudioNext
+    playerctl next
+
+# previous
+XF86AudioPrev
+    playerctl previous
+
+# Stop
+XF86AudioStop
+    playerctl stop
+
+# Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+# Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 10
