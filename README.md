@@ -13,6 +13,7 @@
     - sxhkd
     - picom (ibhagwan-git)
     - polybar
+    - xrandr
     - dunst 
     - network-manager-applet
     - rofi
