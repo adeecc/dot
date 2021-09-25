@@ -16,8 +16,8 @@ alias ..='cd ..'
 
 # Changing "ls" behaviour and using exa
 alias ls='exa --color=auto --group-directories-first' # my preferred listing
-alias la='exa  -a --color=auto --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=auto --group-directories-firs t'  # long format
+alias la='exa -a --color=auto --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=auto --group-directories-first'  # long format
 alias lt='tree -C' # tree listing
 
 # confirm before overwriting something
